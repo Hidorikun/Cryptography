@@ -52,15 +52,18 @@ function validateInputs() {
   var containsPlainChars = false
   var containsCypherChars = false
   var containsIllegalChars = false
+  var containsCommonChars = false
 
   for (index in text) {
-    if (plaintext.includes(text[index])) {
-      containsPlainChars = true
-    }else if (cyphertext.includes(text[index])) {
-      containsCypherChars = true
-    }else {
-      containsIllegalChars = true
-    }
+    if (plaintext.includes(text[index]) && cyphertext.includes(text[index])){
+      containsCommonChars = true
+    }else if (plaintext.includes(text[index])) {
+        containsPlainChars = true
+      }else if (cyphertext.includes(text[index])) {
+        containsCypherChars = true
+      }else {
+        containsIllegalChars = true
+      }
   }
 
   if (text === '') {
