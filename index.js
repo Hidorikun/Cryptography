@@ -66,7 +66,7 @@ function validateInputs() {
   }
 
   if (text === '') {
-    setAlert('Text is empty!')
+    hideAlert()
   }else if (isNaN(key)) {
     setAlert('Key is not set!')
   } else if (containsIllegalChars) {
