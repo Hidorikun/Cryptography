@@ -21,7 +21,6 @@ function crypt() {
   var result = ''
 
   for (index in text) {
-    console.log(mod((plaintext.indexOf(text[index]) + key), (plaintext.length)))
     result += cyphertext[mod((plaintext.indexOf(text[index]) + key), (plaintext.length))]
   }
 
