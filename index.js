@@ -83,19 +83,23 @@ function validateInputs() {
 }
 
 function activateCryptButton() {
-  document.getElementById('crypt-btn').classList.remove('disabled');
+  document.getElementById('crypt-btn').classList.remove('disabled')
+  document.getElementById('crypt-btn').setAttribute('disabled', false)
 }
 
 function deactivateCryptButton() {
-  document.getElementById('crypt-btn').classList.add('disabled');
+  document.getElementById('crypt-btn').classList.add('disabled')
+  document.getElementById('crypt-btn').setAttribute('disabled', true)
 }
 
 function activateDecryptButton() {
-  document.getElementById('decrypt-btn').classList.remove('disabled');
+  document.getElementById('decrypt-btn').classList.remove('disabled')
+  document.getElementById('decrypt-btn').setAttribute('disabled', false)
 }
 
 function deactivateDecryptButton() {
-  document.getElementById('decrypt-btn').classList.add('disabled');
+  document.getElementById('decrypt-btn').classList.add('disabled')
+  document.getElementById('decrypt-btn').setAttribute('disabled', true)
 }
 
 function deactivateButtons() {
@@ -114,3 +118,7 @@ function hideAlert() {
 }
 
 validateInputs()
+
+function something() {
+  console.log('something')
+}
